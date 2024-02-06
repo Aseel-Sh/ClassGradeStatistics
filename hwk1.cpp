@@ -23,11 +23,11 @@ int main(){
   student* studentArr[19];
   float sum=0.0;
   stat.mean = 0.0;
-  char coursename[50];
+  
 
-  cin.getline(coursename, 50);
-  stat.name = coursename;
-
+  //allocating size for name and taking input
+  stat.name = (char*)malloc(50*sizeof(char));
+  cin >> stat.name;
 
   for (int i = 0; i<19; i++){
 
@@ -74,6 +74,7 @@ int main(){
         free(studentArr[i]->last);
         free(studentArr[i]);  
     }
+    free(stat.name);
 
   return 0;
 }
