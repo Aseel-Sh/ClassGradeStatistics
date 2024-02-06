@@ -23,8 +23,10 @@ int main(){
   student* studentArr[19];
   float sum=0.0;
   stat.mean = 0.0;
+  char coursename[50];
 
-  cin >> stat.name;
+  cin.getline(coursename, 50);
+  stat.name = coursename;
 
 
   for (int i = 0; i<19; i++){
